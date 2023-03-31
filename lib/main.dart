@@ -51,13 +51,13 @@ class HomePage extends StatelessWidget {
                   fontSize: 30,
                 ),
               ),
-              leading: IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                icon: Icon(Icons.menu),
-
-              ),
+              // leading: IconButton(
+              //   onPressed: () {
+              //    Scaffold.of(context).openDrawer();
+              //   },
+              //   icon: Icon(Icons.menu),
+              //
+              // ),
             ),
           ),
         ],
