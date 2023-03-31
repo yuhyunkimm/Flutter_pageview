@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -22,12 +23,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView.builder(
-        itemCount: 5,
-        itemBuilder: (context, index) {
-        return Image.network("https://picsum.photos/${index+1}/237/200/300");
-      },),
+      itemCount: 5,
+      itemBuilder: (context, index) {
+        return Image.network(
+          "https://picsum.photos/id/${index + 1}/200/300",
+          fit: BoxFit.cover,
+        );
+      },
+    ),
     );
   }
 }
-
-
