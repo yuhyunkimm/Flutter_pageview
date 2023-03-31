@@ -48,12 +48,57 @@ class HomePage extends StatelessWidget {
               title: const Text(
                 'Around',
                 style: TextStyle(
-                  fontSize: 50,
+                  fontSize: 30,
                 ),
+              ),
+              leading: IconButton(
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                icon: Icon(Icons.menu),
+
               ),
             ),
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                    'https://picsum.photos/200/300',
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Text(
+                'My profile',
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {
+
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {
+
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
